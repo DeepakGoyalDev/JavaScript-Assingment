@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Desk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="heading">
+        <p class="booking-desk">Booking Desk</p>
+        <p class="home-screen-msg">Welcome</p>
+      </div>
+
+      <nav>
+        <button id="make-booking">Make Booking</button>
+        <button id="check-avalibilty">Check Avalibilty</button>
+        <button id="show-all">Show All</button>
+      </nav>
+    </header>
+
+    <!-- Form -->
+    <div class="form-container hidden">
+      <button id="close-form">&times;</button>
+      <p class="booking-form">Booking Form</p>
+      <form>
+        <!-- First Name -->
+        <p><label for="fname">First Name</label></p>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="First Name"
+          required
+        />
+        <div class="fname-error error"></div>
+
+        <!-- Last Name -->
+        <p><label for="lname">Last Name</label></p>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Last Name"
+          required
+        />
+        <div class="lname-error error"></div>
+
+        <!-- Gender -->
+        <p>Gender</p>
+        <div class="gender-option">
+          <div class="gender">
+            <input type="radio" id="male" name="gender" value="Male" required />
+            <label for="male">Male</label>
+          </div>
+          <div class="gender">
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+              required
+            />
+            <label for="female">Female</label>
+          </div>
+          <div class="gender">
+            <input
+              type="radio"
+              id="other"
+              name="gender"
+              value="Other"
+              required
+            />
+            <label for="other">Other</label>
+          </div>
+        </div>
+
+        <!-- Booking Date -->
+
+        <p>Booking Date</p>
+        <label for="booking-from">From</label>
+        <input type="date" id="booking-from" name="booking_from" required />
+        <div class="booking-from-error error"></div>
+
+        <label for="booking-to">To</label>
+        <input type="date" id="booking-to" name="booking_to" required />
+        <div class="booking-to-error error"></div>
+
+        <!-- Number of Guest -->
+        <p><label for="guestCount">Number of Guest</label></p>
+        <input type="number" name="guestCount" min="1" required />
+        <div class="guest-error error"></div>
+
+        <!-- Room Type -->
+        <p>Select Room</p>
+        <label for="room-type"></label>
+        <select name="room_type" id="room-type" required>
+          <option value="Super Delux Room">Super Delux Room</option>
+          <option value="Double Delux Room">Double Delux Room</option>
+          <option value="Delux Room">Delux Room</option>
+        </select>
+
+        <!-- Inclusion -->
+        <p>Try out other other service</p>
+        <div class="other-service">
+          <div class="service">
+            <input type="checkbox" name="other_service" id="spa" value="Spa" />
+            <label for="spa">Spa</label>
+          </div>
+          <div class="service">
+            <input
+              type="checkbox"
+              name="other_service"
+              id="swimming-pool"
+              value="Swimming-pool"
+            />
+            <label for="swimming-pool">Swimming-pool</label>
+          </div>
+          <div class="service">
+            <input
+              type="checkbox"
+              name="other_service"
+              id="doctor-call"
+              value="Doctor on Call"
+            />
+            <label for="doctor-call">Doctor On Call</label>
+          </div>
+          <div class="service">
+            <input
+              type="checkbox"
+              name="other_service"
+              id="airport-ride"
+              value="Airport-ride"
+            />
+            <label for="airport-ride">Airport Ride</label>
+          </div>
+          <div class="service">
+            <input type="checkbox" name="other_service" id="gym" value="Gym" />
+            <label for="gym">Gym</label>
+          </div>
+          <div class="service">
+            <input
+              type="checkbox"
+              name="other_service"
+              id="candel-night-dinner"
+              value="Candel Night Dinner"
+            />
+            <label for="candel-night-dinner">Candel Night Dinner</label>
+          </div>
+        </div>
+
+        <!-- Message to Hotlier -->
+        <p><label for="message">Message to hotelier....</label></p>
+        <textarea
+          name="hotelier-msg"
+          id="message"
+          rows="2"
+          placeholder="write here...."
+        ></textarea>
+
+        <!-- Reset and Submit Button -->
+        <input type="reset" id="reset-button" />
+        <input type="submit" id="submit-button" />
+      </form>
+    </div>
+
+    <!-- Generate Receppit -->
+    <div class="recepit hidden">
+      <button id="close-recepit">&times;</button>
+      <table>
+        <tr>
+          <td>Name</td>
+          <th id="name"></th>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <th id="gender"></th>
+        </tr>
+        <tr>
+          <td>Booking Form</td>
+          <th id="booking_from"></th>
+        </tr>
+        <tr>
+          <td>Booking To</td>
+          <th id="booking_to"></th>
+        </tr>
+        <tr>
+          <td>Number of Guest</td>
+          <th id="guest_count"></th>
+        </tr>
+        <tr>
+          <td>Room Type</td>
+          <th id="room_type"></th>
+        </tr>
+        <tr>
+          <td>Other Service</td>
+          <th>Yet To add on</th>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Check Avalibilty -->
+    <div class="calender hidden">
+      <button id="close-calender">&times;</button>
+      <div id="month-year"></div>
+      <label for="room-type"></label>
+        <select name="room_type" id="room-type" required>
+          <option value="Super Delux Room">Super Delux Room</option>
+          <option value="Double Delux Room">Double Delux Room</option>
+          <option value="Delux Room">Delux Room</option>
+        </select>
+        <div id="show-calender">
+            <table></table>
+        </div>
+      <button id="prev-month">Prev</button>
+      <button id="next-month">Next</button>
+    </div>
+
+    <!-- Show All -->
+    <div class="show-all hidden">
+      <button id="close-show-all">&times;</button>
+      <button id="sortByFirstName">Sort By First Name</button>
+      <button id="sortByPrice">Sort By Price</button>
+      <div id="show_all_list"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 1000;
+}
+.heading {
+  width: 100%;
+  background-color: #39a2db;
+  height: 150px;
+}
+.booking-desk {
+  color: #e8f0f2;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  font-size: 50px;
+}
+.home-screen-msg {
+  color: blue;
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  font-size: 50px;
+}
+
+nav {
+  background-color: #a2dbfa;
+  width: 50%;
+  height: 170px;
+  margin: -70px auto 20px;
+  border-radius: 20px;
+  padding: 25px 25px;
+  position: relative;
+}
+nav button {
+  background-color: #faf3f3;
+  font-size: 30px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin: 0px 70px;
+  display: inline-block;
+  height: 100%;
+  border: none;
+  color: #053742;
+}
+nav button:hover {
+  background-color: #e8f0f2;
+}
+
+#close-form,
+#close-calender,
+#close-show-all,
+#close-recepit {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  right: 17px;
+  top: 10px;
+}
+
+/* Form */
+.form-container,
+.show-all,
+.calender {
+  position: relative;
+  top: 300px;
+  width: 50%;
+  margin: 10px auto;
+  background-color: #39a2db;
+  padding: 30px;
+  border-radius: 20px;
+}
+.booking-form {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea,
+input[type="date"],
+.gender-option,
+.other-service {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 7px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.gender-option {
+  border: none;
+  background-color: white;
+}
+
+form p {
+  color: rgb(150, 35, 150);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.gender {
+  display: inline-block;
+  color: black;
+  padding: 0px 70px;
+}
+.service {
+  display: inline-block;
+  width: 49%;
+  padding: 5px 20px;
+  margin: 0px 3px;
+}
+.other-service {
+  background-color: white;
+}
+#reset-button,
+#submit-button {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  margin: 0px 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  left: 40%;
+}
+
+/* Recepit */
+.recepit {
+  background-color: #39a2db;
+  position: relative;
+  top: 300px;
+  width: 50%;
+  margin: 0px auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+.recepit table {
+  border: 2px solid black;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.recepit td {
+  border: 2px solid black;
+  width: 50%;
+  padding: 20px;
+  color: blue;
+}
+
+.recepit th {
+  border: 2px solid black;
+  padding: 20px;
+  color: black;
+  font-weight: 200;
+}
+
+/* Check Avilabilty */
+.calender table {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  background-color: white;
+
+  table-layout: fixed;
+}
+.calender tr {
+  border: none;
+}
+.calender table th {
+  border: 2px solid black;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 5px;
+  background-color: #a2dbfa;
+  border-collapse: collapse;
+}
+.calender table td {
+  text-align: center;
+  border: 2px solid black;
+  font-size: 15px;
+  padding: 10px;
+}
+.prev {
+  background-color: #d1cdcd;
+}
+.present {
+  background-color: blueviolet;
+}
+#month-year{
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: 1px solid #053742;
+  background-color: pink;
+  border-radius: 10px ;
+}
+#prev-month,
+#next-month{
+  padding: 10px 40px;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 20px 17% 0px;
+  border: 1px solid #053742;
+  background-color: pink;
+
+}
+.avilable{
+  color: green;
+}
+.full{
+  color: red;
+}
+/* Show All */
+.show-all {
+  width: 80%;
+}
+#sortByFirstName,
+#sortByPrice {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  margin: 0px 20px 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  left: 35%;
+}
+
+.show-all table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.show-all td,
+.show-all th {
+  border: 3px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+.show-all tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+/* Dynamic Classes */
+.bdr {
+  border: 2px solid red;
+}
+.hidden {
+  display: none;
+}
+.error {
+  color: red;
+  font-weight: 600;
+}
